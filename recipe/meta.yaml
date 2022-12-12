@@ -1,5 +1,5 @@
 {% set name = "multitaper" %}
-{% set version = "1.1.5" %}
+{% set version = "1.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/multitaper-{{ version }}.tar.gz
-  sha256: 8e01e8d363b44e6a930182f0bf39366915249cf32b7a3e7ff000f8513677b0be
+  sha256: a803f76504d530e439b81693ef957ffb7c2370fcdd7ae81a77832e4758c74362
 
 build:
   noarch: python
@@ -22,6 +22,7 @@ requirements:
     - python >=3.7
     - numpy
     - scipy
+    - numba
 
 test:
   imports:
